@@ -1,36 +1,41 @@
 # Data Processing (OOP Version)
 
-This project demonstrates how to transform CSV-based data handling into a clean, object-oriented Python design.  
-It includes three main classes:
+This project demonstrates how to process CSV data using an object-oriented programming (OOP) approach in Python.  
+It replaces procedural data-processing techniques with reusable classes — **DataLoader**, **Table**, and **DB** — that behave like a lightweight database engine.
 
-- **DataLoader** – loads CSV files into Python dictionaries  
-- **Table** – supports filtering, aggregation, and table joining  
-- **DB** – a simple in-memory table storage and lookup system  
+The system can:
 
-The script processes data from `Cities.csv` and `Countries.csv`, performs filtering, aggregation, and joins, and prints the results.
+- Load CSV files safely  
+- Store tables in an in-memory database  
+- Filter rows based on any condition  
+- Perform aggregation (min, max, count, average, etc.)  
+- Join tables on a shared key (similar to SQL joins)  
+- Chain operations together  
 
----
+--- 
 
-## Features
+# Classes
 
-### 1. DataLoader
-Handles importing CSV files.
+## 1. `DataLoader`
+Handles loading CSV files using Python’s built-in `csv.DictReader`.
 
-- Automatically sets base path to the script’s directory if none is provided.
-- `load_csv(filename)` returns a list of dictionaries representing rows.
+### Features
+- Automatically finds the script’s directory using `__file__`
+- Loads CSV files into a list of dictionaries
 
-### 2. DB (Simple In-Memory Database)
-A lightweight storage class.
+## 2. `Table`
 
-- `insert(table)` stores a Table object by name.
-- `search(name)` retrieves a stored table.
+### Filtering
+- Using Filter with keyword.
 
-### 3. Table Class
-Represents a data table and offers:
+### Aggregation
+- Using to find min, max, avg, etc.
 
-#### Filtering
-```python
-table.filter(lambda row: condition)
+### Join
+- Join two tables together.
+
+## 3. `DB`
+- A tiny in-memory database holding multiple Table objects.
 
 ---
 
