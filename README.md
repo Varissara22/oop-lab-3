@@ -28,6 +28,20 @@ A lightweight storage class.
 ### 3. Table Class
 Represents a data table and offers:
 
-#### ✔ Filtering
+#### Filtering
 ```python
 table.filter(lambda row: condition)
+
+---
+
+## Requirements
+
+* Python 3.x
+
+---
+
+##  How to Use
+
+To run the demonstration script, execute `data.processing.py` from your terminal:
+
+```bash
